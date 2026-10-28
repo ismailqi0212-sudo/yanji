@@ -1,0 +1,38 @@
+# Runtime data: credentials, conversations, uploaded documents, traces and backups
+/data/
+**/data/
+/backups/
+/uploads/
+/files/
+*.sqlite
+*.sqlite-*
+*.db
+*.db-*
+*.key
+*.pem
+*.p12
+*.pfx
+.env
+.env.*
+!.env.example
+*.log
+# Build and local tooling
+node_modules/
+dist/
+*.tsbuildinfo
+.DS_Store
+.vscode/
+.idea/
+.codex/
+.agents/
+coverage/
+
+# Python environments, caches and local coverage
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
