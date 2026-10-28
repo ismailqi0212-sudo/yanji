@@ -1,0 +1,34 @@
+[
+  {
+    "id": "operating-metrics",
+    "name": "经营数据底稿",
+    "description": "跨年对齐业务指标，按条件拆出单季数据",
+    "requiresDocuments": true,
+    "sourceMode": "documents",
+    "prompt": "帮我把这些财报里的经营数据整理成表，重点看看收入、付费用户和ARPU，再画几张趋势图。"
+  },
+  {
+    "id": "earnings-brief",
+    "name": "财报点评",
+    "description": "从新财报中找变化，形成有依据的点评",
+    "requiresDocuments": true,
+    "sourceMode": "documents",
+    "prompt": "帮我看看这份财报有哪些值得关注的变化，写一篇简短点评。"
+  },
+  {
+    "id": "financial-health",
+    "name": "财务体检",
+    "description": "交叉检查盈利、现金流与负债",
+    "requiresDocuments": false,
+    "sourceMode": "auto",
+    "prompt": "帮我看看【公司名称或证券代码】这几年的利润和现金流，财务上有什么需要注意的？"
+  },
+  {
+    "id": "scenario",
+    "name": "假设测算",
+    "description": "用历史财务作基准，调整增长率和毛利率",
+    "requiresDocuments": false,
+    "sourceMode": "external",
+    "prompt": "如果【公司名称或证券代码】未来两年收入增长有变化，会怎样影响毛利？帮我做个可以调整的测算。"
+  }
+]

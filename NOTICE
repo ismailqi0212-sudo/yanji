@@ -1,0 +1,43 @@
+研迹 · 对话投研
+
+This application contains code adapted from virattt/ai-financial-agent:
+https://github.com/virattt/ai-financial-agent
+Pinned upstream commit: 836d30b28ff596e01d8cc287e0b83b3d3e1a1bc1
+
+Upstream LICENSE notice:
+Copyright 2024 Vercel, Inc.
+Licensed under the Apache License, Version 2.0.
+http://www.apache.org/licenses/LICENSE-2.0
+
+Reused/adapted source:
+- src/upstream/financial-table-utils.ts: upstream formatting utilities, retained.
+- server/upstream/financial-tools.mjs: FinancialToolsManager, tool-call cache and
+  named financial tools, adapted to injected public-data providers and JSON schema.
+- src/components/Cards.tsx / FinancialTable: adapted metric-row/report-column
+  organization, missing-field filtering and formatter separation from
+  components/financial-table-base.tsx; UI primitives replaced with HeroUI.
+
+Source reference snapshots are retained under upstream-reference/. These are not
+part of the application build. Next.js authentication, PostgreSQL and Financial
+Datasets endpoints are not used by the local build. Express/Vite bootstrapping,
+streaming transport, research cards, citations, deterministic scenarios, source
+validation and report compilation are local adaptations/additions. Shared data
+adapters and PDF parsing are carried over from the prior local 研迹 project.
+
+Do not interpret this adaptation as the upstream project's official distribution.
+
+2026-10 architecture update:
+- Agent runtime is separated into LLM, Tools, Memory and Loop modules.
+- DeepFinance (https://github.com/wig123/DeepFinance, inspected commit f725744)
+  informed the document/research-gap/report/evidence-side-panel interaction design.
+  No DeepFinance source files are copied into this application.
+- No HelloAgents SDK is bundled; the four-layer organization is a conceptual and
+  implementation responsibility split, not a framework certification claim.
+
+2026-10 Python migration:
+Production backend is ported to Python/FastAPI under backend/yanji/. Tool descriptions and policies retain prior adaptation contracts. server/ and tests/ are preserved for regression and rollback; Python does not delegate backend business execution to Node.
+
+Public source snapshot:
+- Exported from the private development project without its Git history or README.
+- Runtime databases, uploaded files, credentials and personal interview notes are excluded.
+- Legacy credential import requires explicit YANJI_IMPORT_LEGACY_SETTINGS=1.

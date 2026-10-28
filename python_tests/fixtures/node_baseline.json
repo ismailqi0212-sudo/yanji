@@ -1,0 +1,1548 @@
+[
+  {
+    "kind": "symbol",
+    "input": "AAPL",
+    "expected": "usAAPL"
+  },
+  {
+    "kind": "symbol",
+    "input": "usAAPL",
+    "expected": "usAAPL"
+  },
+  {
+    "kind": "symbol",
+    "input": "NASDAQ:AAPL",
+    "expected": "usAAPL"
+  },
+  {
+    "kind": "symbol",
+    "input": "AAPL.US",
+    "expected": "usAAPL"
+  },
+  {
+    "kind": "symbol",
+    "input": "MSFT.OQ",
+    "expected": "usMSFT"
+  },
+  {
+    "kind": "symbol",
+    "input": "BRK.B",
+    "expected": "usBRK.B"
+  },
+  {
+    "kind": "symbol",
+    "input": "002027",
+    "expected": "sz002027"
+  },
+  {
+    "kind": "symbol",
+    "input": "sh600519",
+    "expected": "sh600519"
+  },
+  {
+    "kind": "symbol",
+    "input": "600519.SH",
+    "expected": "sh600519"
+  },
+  {
+    "kind": "symbol",
+    "input": "hk9899",
+    "expected": "hk09899"
+  },
+  {
+    "kind": "symbol",
+    "input": "09899.HK",
+    "expected": "hk09899"
+  },
+  {
+    "kind": "symbol",
+    "input": "01024",
+    "expected": "hk01024"
+  },
+  {
+    "kind": "symbol",
+    "input": "sz600519",
+    "error": "代码与交易所不匹配，请检查后重试。"
+  },
+  {
+    "kind": "symbol",
+    "input": "00000",
+    "error": "当前仅支持港币普通股代码，不支持认股权证或其他币种柜台。"
+  },
+  {
+    "kind": "symbol",
+    "input": "123456",
+    "error": "当前支持 A 股、港股普通股与美股证券。请核对代码。"
+  },
+  {
+    "kind": "symbol",
+    "input": "hk12345",
+    "error": "当前仅支持港币普通股代码，不支持认股权证或其他币种柜台。"
+  },
+  {
+    "kind": "symbol",
+    "input": "?",
+    "error": "请输入证券代码，例如 002027、01024.HK 或 AAPL。"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "sum",
+      "values": [
+        120,
+        100
+      ]
+    },
+    "expected": {
+      "operation": "sum",
+      "values": [
+        120,
+        100
+      ],
+      "result": 220,
+      "warning": ""
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "sum",
+      "values": [
+        10,
+        0
+      ]
+    },
+    "expected": {
+      "operation": "sum",
+      "values": [
+        10,
+        0
+      ],
+      "result": 10,
+      "warning": ""
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "sum",
+      "values": [
+        10,
+        -10
+      ]
+    },
+    "expected": {
+      "operation": "sum",
+      "values": [
+        10,
+        -10
+      ],
+      "result": 0,
+      "warning": ""
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "sum",
+      "values": []
+    },
+    "error": "计算输入必须是有限数字数组，最多 30 项。"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "subtract",
+      "values": [
+        120,
+        100
+      ]
+    },
+    "expected": {
+      "operation": "subtract",
+      "values": [
+        120,
+        100
+      ],
+      "result": 20,
+      "warning": ""
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "subtract",
+      "values": [
+        10,
+        0
+      ]
+    },
+    "expected": {
+      "operation": "subtract",
+      "values": [
+        10,
+        0
+      ],
+      "result": 10,
+      "warning": ""
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "subtract",
+      "values": [
+        10,
+        -10
+      ]
+    },
+    "expected": {
+      "operation": "subtract",
+      "values": [
+        10,
+        -10
+      ],
+      "result": 20,
+      "warning": ""
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "subtract",
+      "values": []
+    },
+    "error": "计算输入必须是有限数字数组，最多 30 项。"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "ratio",
+      "values": [
+        120,
+        100
+      ]
+    },
+    "expected": {
+      "operation": "ratio",
+      "values": [
+        120,
+        100
+      ],
+      "result": 1.2,
+      "warning": ""
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "ratio",
+      "values": [
+        10,
+        0
+      ]
+    },
+    "error": "比率需要两个数字，分母不能为零"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "ratio",
+      "values": [
+        10,
+        -10
+      ]
+    },
+    "expected": {
+      "operation": "ratio",
+      "values": [
+        10,
+        -10
+      ],
+      "result": -1,
+      "warning": ""
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "ratio",
+      "values": []
+    },
+    "error": "计算输入必须是有限数字数组，最多 30 项。"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "growth",
+      "values": [
+        120,
+        100
+      ]
+    },
+    "expected": {
+      "operation": "growth",
+      "values": [
+        120,
+        100
+      ],
+      "result": 19.999999999999996,
+      "warning": ""
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "growth",
+      "values": [
+        10,
+        0
+      ]
+    },
+    "error": "上期为零或负数，不使用常规同比增长率；请说明特殊基数。"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "growth",
+      "values": [
+        10,
+        -10
+      ]
+    },
+    "error": "上期为零或负数，不使用常规同比增长率；请说明特殊基数。"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "growth",
+      "values": []
+    },
+    "error": "计算输入必须是有限数字数组，最多 30 项。"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "percentage_points",
+      "values": [
+        120,
+        100
+      ]
+    },
+    "expected": {
+      "operation": "percentage_points",
+      "values": [
+        120,
+        100
+      ],
+      "result": 20,
+      "warning": "输入应为百分数本身，例如 30.2 和 28.1，结果单位为百分点。"
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "percentage_points",
+      "values": [
+        10,
+        0
+      ]
+    },
+    "expected": {
+      "operation": "percentage_points",
+      "values": [
+        10,
+        0
+      ],
+      "result": 10,
+      "warning": "输入应为百分数本身，例如 30.2 和 28.1，结果单位为百分点。"
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "percentage_points",
+      "values": [
+        10,
+        -10
+      ]
+    },
+    "expected": {
+      "operation": "percentage_points",
+      "values": [
+        10,
+        -10
+      ],
+      "result": 20,
+      "warning": "输入应为百分数本身，例如 30.2 和 28.1，结果单位为百分点。"
+    }
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "percentage_points",
+      "values": []
+    },
+    "error": "计算输入必须是有限数字数组，最多 30 项。"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "bad",
+      "values": [
+        120,
+        100
+      ]
+    },
+    "error": "不支持该计算"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "bad",
+      "values": [
+        10,
+        0
+      ]
+    },
+    "error": "不支持该计算"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "bad",
+      "values": [
+        10,
+        -10
+      ]
+    },
+    "error": "不支持该计算"
+  },
+  {
+    "kind": "calculate",
+    "input": {
+      "operation": "bad",
+      "values": []
+    },
+    "error": "计算输入必须是有限数字数组，最多 30 项。"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": -100,
+      "margin": 25,
+      "years": 0
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": -100,
+      "margin": 25,
+      "years": 1
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": -100,
+      "margin": 25,
+      "years": 3
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": -100,
+      "margin": 25,
+      "years": 4
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": -10,
+      "margin": 25,
+      "years": 0
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": -10,
+      "margin": 25,
+      "years": 1
+    },
+    "expected": [
+      {
+        "period": "情景第1年",
+        "revenue": 108,
+        "grossProfit": 27
+      }
+    ]
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": -10,
+      "margin": 25,
+      "years": 3
+    },
+    "expected": [
+      {
+        "period": "情景第1年",
+        "revenue": 108,
+        "grossProfit": 27
+      },
+      {
+        "period": "情景第2年",
+        "revenue": 97.2,
+        "grossProfit": 24.3
+      },
+      {
+        "period": "情景第3年",
+        "revenue": 87.48000000000002,
+        "grossProfit": 21.870000000000005
+      }
+    ]
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": -10,
+      "margin": 25,
+      "years": 4
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 0,
+      "margin": 25,
+      "years": 0
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 0,
+      "margin": 25,
+      "years": 1
+    },
+    "expected": [
+      {
+        "period": "情景第1年",
+        "revenue": 120,
+        "grossProfit": 30
+      }
+    ]
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 0,
+      "margin": 25,
+      "years": 3
+    },
+    "expected": [
+      {
+        "period": "情景第1年",
+        "revenue": 120,
+        "grossProfit": 30
+      },
+      {
+        "period": "情景第2年",
+        "revenue": 120,
+        "grossProfit": 30
+      },
+      {
+        "period": "情景第3年",
+        "revenue": 120,
+        "grossProfit": 30
+      }
+    ]
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 0,
+      "margin": 25,
+      "years": 4
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 5,
+      "margin": 25,
+      "years": 0
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 5,
+      "margin": 25,
+      "years": 1
+    },
+    "expected": [
+      {
+        "period": "情景第1年",
+        "revenue": 126,
+        "grossProfit": 31.5
+      }
+    ]
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 5,
+      "margin": 25,
+      "years": 3
+    },
+    "expected": [
+      {
+        "period": "情景第1年",
+        "revenue": 126,
+        "grossProfit": 31.5
+      },
+      {
+        "period": "情景第2年",
+        "revenue": 132.3,
+        "grossProfit": 33.075
+      },
+      {
+        "period": "情景第3年",
+        "revenue": 138.91500000000002,
+        "grossProfit": 34.728750000000005
+      }
+    ]
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 5,
+      "margin": 25,
+      "years": 4
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 501,
+      "margin": 25,
+      "years": 0
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 501,
+      "margin": 25,
+      "years": 1
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 501,
+      "margin": 25,
+      "years": 3
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "scenario",
+    "input": {
+      "baseRevenue": 120,
+      "growth": 501,
+      "margin": 25,
+      "years": 4
+    },
+    "error": "请核对假设：增速需大于-100%，毛利率0–100%，年数1–3"
+  },
+  {
+    "kind": "align",
+    "input": [
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024-Q1",
+        "value": 10,
+        "rawValue": "10",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露10",
+        "page": 1,
+        "documentId": "doc"
+      },
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024-H1",
+        "value": 30,
+        "rawValue": "30",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露30",
+        "page": 1,
+        "documentId": "doc"
+      },
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024-9M",
+        "value": 60,
+        "rawValue": "60",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露60",
+        "page": 1,
+        "documentId": "doc"
+      },
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024",
+        "value": 100,
+        "rawValue": "100",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露100",
+        "page": 1,
+        "documentId": "doc"
+      }
+    ],
+    "expected": {
+      "rows": [
+        {
+          "id": "metric-0",
+          "metric": "营业收入",
+          "company": "example",
+          "unit": "万元",
+          "currency": "CNY",
+          "scope": "合并",
+          "kind": "flow",
+          "calendar": "12月",
+          "cells": {
+            "2024": {
+              "value": 100,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 100,
+                  "rawValue": "100",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露100",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            },
+            "2024-Q1": {
+              "value": 10,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 10,
+                  "rawValue": "10",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露10",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            },
+            "2024-H1": {
+              "value": 30,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 30,
+                  "rawValue": "30",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露30",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            },
+            "2024-9M": {
+              "value": 60,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 60,
+                  "rawValue": "60",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露60",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            },
+            "2024-Q2": {
+              "value": 20,
+              "status": "derived",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "formula": "2024-H1 − 2024-Q1",
+              "operands": [
+                {
+                  "period": "2024-H1",
+                  "value": 30,
+                  "sourceIds": [
+                    "doc:1:0"
+                  ]
+                },
+                {
+                  "period": "2024-Q1",
+                  "value": 10,
+                  "sourceIds": [
+                    "doc:1:0"
+                  ]
+                }
+              ],
+              "candidates": []
+            },
+            "2024-Q3": {
+              "value": 30,
+              "status": "derived",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "formula": "2024-9M − 2024-H1",
+              "operands": [
+                {
+                  "period": "2024-9M",
+                  "value": 60,
+                  "sourceIds": [
+                    "doc:1:0"
+                  ]
+                },
+                {
+                  "period": "2024-H1",
+                  "value": 30,
+                  "sourceIds": [
+                    "doc:1:0"
+                  ]
+                }
+              ],
+              "candidates": []
+            },
+            "2024-Q4": {
+              "value": 40,
+              "status": "derived",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "formula": "2024 − 2024-9M",
+              "operands": [
+                {
+                  "period": "2024",
+                  "value": 100,
+                  "sourceIds": [
+                    "doc:1:0"
+                  ]
+                },
+                {
+                  "period": "2024-9M",
+                  "value": 60,
+                  "sourceIds": [
+                    "doc:1:0"
+                  ]
+                }
+              ],
+              "candidates": []
+            }
+          }
+        }
+      ],
+      "periods": [
+        "2024-Q1",
+        "2024-H1",
+        "2024-Q2",
+        "2024-9M",
+        "2024-Q3",
+        "2024-Q4",
+        "2024"
+      ],
+      "conflicts": 0,
+      "fromMaterials": true
+    }
+  },
+  {
+    "kind": "align",
+    "input": [
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024",
+        "value": 100,
+        "rawValue": "100",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露100",
+        "page": 1,
+        "documentId": "doc"
+      },
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024",
+        "value": 120,
+        "rawValue": "120",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露120",
+        "page": 1,
+        "documentId": "doc"
+      }
+    ],
+    "expected": {
+      "rows": [
+        {
+          "id": "metric-0",
+          "metric": "营业收入",
+          "company": "example",
+          "unit": "万元",
+          "currency": "CNY",
+          "scope": "合并",
+          "kind": "flow",
+          "calendar": "12月",
+          "cells": {
+            "2024": {
+              "value": null,
+              "status": "conflict",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 100,
+                  "rawValue": "100",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露100",
+                  "page": 1,
+                  "documentId": "doc"
+                },
+                {
+                  "value": 120,
+                  "rawValue": "120",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露120",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "periods": [
+        "2024"
+      ],
+      "conflicts": 1,
+      "fromMaterials": true
+    }
+  },
+  {
+    "kind": "align",
+    "input": [
+      {
+        "company": "example",
+        "metric": "月活用户数",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024-H1",
+        "value": 30,
+        "rawValue": "30",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露30",
+        "page": 1,
+        "documentId": "doc"
+      },
+      {
+        "company": "example",
+        "metric": "月活用户数",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024-Q1",
+        "value": 10,
+        "rawValue": "10",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露10",
+        "page": 1,
+        "documentId": "doc"
+      }
+    ],
+    "expected": {
+      "rows": [
+        {
+          "id": "metric-0",
+          "metric": "月活用户数",
+          "company": "example",
+          "unit": "万元",
+          "currency": "CNY",
+          "scope": "合并",
+          "kind": "average",
+          "calendar": "12月",
+          "cells": {
+            "2024-H1": {
+              "value": 30,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 30,
+                  "rawValue": "30",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露30",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            },
+            "2024-Q1": {
+              "value": 10,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 10,
+                  "rawValue": "10",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露10",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "periods": [
+        "2024-Q1",
+        "2024-H1"
+      ],
+      "conflicts": 0,
+      "fromMaterials": true
+    }
+  },
+  {
+    "kind": "align",
+    "input": [
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "未知",
+        "period": "2024-H1",
+        "value": 30,
+        "rawValue": "30",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露30",
+        "page": 1,
+        "documentId": "doc"
+      },
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "未知",
+        "period": "2024-Q1",
+        "value": 10,
+        "rawValue": "10",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露10",
+        "page": 1,
+        "documentId": "doc"
+      }
+    ],
+    "expected": {
+      "rows": [
+        {
+          "id": "metric-0",
+          "metric": "营业收入",
+          "company": "example",
+          "unit": "万元",
+          "currency": "CNY",
+          "scope": "合并",
+          "kind": "flow",
+          "calendar": "未知",
+          "cells": {
+            "2024-H1": {
+              "value": 30,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 30,
+                  "rawValue": "30",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露30",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            },
+            "2024-Q1": {
+              "value": 10,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 10,
+                  "rawValue": "10",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露10",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "periods": [
+        "2024-Q1",
+        "2024-H1"
+      ],
+      "conflicts": 0,
+      "fromMaterials": true
+    }
+  },
+  {
+    "kind": "align",
+    "input": [
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2023",
+        "value": 100,
+        "rawValue": "100",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露100",
+        "page": 1,
+        "documentId": "doc"
+      },
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024",
+        "value": 120,
+        "rawValue": "120",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露120",
+        "page": 1,
+        "documentId": "doc"
+      }
+    ],
+    "expected": {
+      "rows": [
+        {
+          "id": "metric-0",
+          "metric": "营业收入",
+          "company": "example",
+          "unit": "万元",
+          "currency": "CNY",
+          "scope": "合并",
+          "kind": "flow",
+          "calendar": "12月",
+          "cells": {
+            "2023": {
+              "value": 100,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 100,
+                  "rawValue": "100",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露100",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            },
+            "2024": {
+              "value": 120,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 120,
+                  "rawValue": "120",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露120",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "periods": [
+        "2023",
+        "2024"
+      ],
+      "conflicts": 0,
+      "fromMaterials": true
+    }
+  },
+  {
+    "kind": "align",
+    "input": [
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "万元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024",
+        "value": 100,
+        "rawValue": "100",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露100",
+        "page": 1,
+        "documentId": "doc"
+      },
+      {
+        "company": "example",
+        "metric": "营业收入",
+        "scope": "合并",
+        "unit": "亿元",
+        "currency": "CNY",
+        "kind": "flow",
+        "calendar": "12月",
+        "period": "2024",
+        "value": 0.01,
+        "rawValue": "0.01",
+        "sourceId": "doc:1:0",
+        "quote": "收入披露0.01",
+        "page": 1,
+        "documentId": "doc"
+      }
+    ],
+    "expected": {
+      "rows": [
+        {
+          "id": "metric-0",
+          "metric": "营业收入",
+          "company": "example",
+          "unit": "万元",
+          "currency": "CNY",
+          "scope": "合并",
+          "kind": "flow",
+          "calendar": "12月",
+          "cells": {
+            "2024": {
+              "value": 100,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 100,
+                  "rawValue": "100",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露100",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "id": "metric-1",
+          "metric": "营业收入",
+          "company": "example",
+          "unit": "亿元",
+          "currency": "CNY",
+          "scope": "合并",
+          "kind": "flow",
+          "calendar": "12月",
+          "cells": {
+            "2024": {
+              "value": 0.01,
+              "status": "reported",
+              "sourceIds": [
+                "doc:1:0"
+              ],
+              "candidates": [
+                {
+                  "value": 0.01,
+                  "rawValue": "0.01",
+                  "sourceId": "doc:1:0",
+                  "quote": "收入披露0.01",
+                  "page": 1,
+                  "documentId": "doc"
+                }
+              ]
+            }
+          }
+        }
+      ],
+      "periods": [
+        "2024"
+      ],
+      "conflicts": 0,
+      "fromMaterials": true
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": false,
+      "question": "比较财务"
+    },
+    "expected": {
+      "sourceMode": "external",
+      "sourceReason": "本对话没有材料，使用可用的公开数据工具"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": false,
+      "question": "仅根据报告分析"
+    },
+    "error": "你要求依据报告，但本对话还没有报告，请先上传材料"
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": false,
+      "question": "帮我搜集公开信息"
+    },
+    "expected": {
+      "sourceMode": "external",
+      "sourceReason": "本对话没有材料，使用可用的公开数据工具"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": false,
+      "question": "不要联网，只看年报"
+    },
+    "error": "你要求依据报告，但本对话还没有报告，请先上传材料"
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": false,
+      "question": "搜索上传报告中的收入"
+    },
+    "expected": {
+      "sourceMode": "external",
+      "sourceReason": "本对话没有材料，使用可用的公开数据工具"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": false,
+      "question": "忽略报告，只用外部信息"
+    },
+    "expected": {
+      "sourceMode": "external",
+      "sourceReason": "用户明确只使用外部信息"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": false,
+      "question": "最新股价"
+    },
+    "expected": {
+      "sourceMode": "external",
+      "sourceReason": "本对话没有材料，使用可用的公开数据工具"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": true,
+      "question": "比较财务"
+    },
+    "expected": {
+      "sourceMode": "documents",
+      "sourceReason": "默认优先使用当前对话的报告"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": true,
+      "question": "仅根据报告分析"
+    },
+    "expected": {
+      "sourceMode": "documents",
+      "sourceReason": "用户要求依据报告或不使用外部信息"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": true,
+      "question": "帮我搜集公开信息"
+    },
+    "expected": {
+      "sourceMode": "hybrid",
+      "sourceReason": "已上传报告，并明确请求补充外部信息"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": true,
+      "question": "不要联网，只看年报"
+    },
+    "expected": {
+      "sourceMode": "documents",
+      "sourceReason": "用户要求依据报告或不使用外部信息"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": true,
+      "question": "搜索上传报告中的收入"
+    },
+    "expected": {
+      "sourceMode": "documents",
+      "sourceReason": "默认优先使用当前对话的报告"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": true,
+      "question": "忽略报告，只用外部信息"
+    },
+    "expected": {
+      "sourceMode": "external",
+      "sourceReason": "用户明确只使用外部信息"
+    }
+  },
+  {
+    "kind": "source",
+    "input": {
+      "docs": true,
+      "question": "最新股价"
+    },
+    "expected": {
+      "sourceMode": "hybrid",
+      "sourceReason": "已上传报告，并明确请求补充外部信息"
+    }
+  }
+]
